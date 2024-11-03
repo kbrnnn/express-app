@@ -1,0 +1,16 @@
+name: Release Node.js App DwD 3.1
+
+on:
+  push:
+    branches: 
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: npm
